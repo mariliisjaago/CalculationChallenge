@@ -11,7 +11,7 @@ namespace CalculationUI
 
             for (int i = 0; i < 100; ++i)
             {
-                estonianTemperatures.Insert(randomGenerator.Next(1, 100));
+                estonianTemperatures.Insert(randomGenerator.Next(1, 101));
             }
 
 
