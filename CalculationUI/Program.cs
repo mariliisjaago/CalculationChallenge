@@ -6,12 +6,19 @@ namespace CalculationUI
     {
         static void Main(string[] args)
         {
-            var estonianTemperatures = new Temperature();
+            ITemperature estonianTemperatures = new Temperature();
             var randomGenerator = new Random();
+
+            string[] temperatureWords = new string[] { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten" };
+
+            //for (int i = 0; i < 100; ++i)
+            //{
+            //    estonianTemperatures.Insert(randomGenerator.Next(1, 101));
+            //}
 
             for (int i = 0; i < 100; ++i)
             {
-                estonianTemperatures.Insert(randomGenerator.Next(1, 101));
+                estonianTemperatures.Insert(temperatureWords[randomGenerator.Next(1, 10)]);
             }
 
 
