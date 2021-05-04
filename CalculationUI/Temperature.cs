@@ -17,10 +17,10 @@ namespace CalculationUI
 
         public void Insert(int temperature)
         {
-            // add guards?
-            if (temperature < 0 | temperature > int.MaxValue)
+            // add guards. For example, business logic needs it to be between 0 and 100.
+            if (temperature < 0 | temperature > 100)
             {
-                throw new Exception("Argument not in valid range (0 - maximum of int)");
+                throw new Exception("Argument not in valid range (0 - 100)");
             }
 
             AdjustMinAndMaxIfNeeded(temperature);
